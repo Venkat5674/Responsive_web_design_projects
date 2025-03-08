@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python Documentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav id="navbar">
+    <header>Python Documentation</header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Getting_Started" class="nav-link">Getting Started</a>
+    <a href="#Data_Types" class="nav-link">Data Types</a>
+    <a href="#Control_Flow" class="nav-link">Control Flow</a>
+    <a href="#Functions" class="nav-link">Functions</a>
+    <a href="#Object_Oriented_Programming" class="nav-link">Object Oriented Programming</a>
+    <a href="#Modules_and_Packages" class="nav-link">Modules and Packages</a>
+    <a href="#Exception_Handling" class="nav-link">Exception Handling</a>
+  </nav>
+  
+  <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <p>Python is a high-level, interpreted programming language created by Guido van Rossum and first released in 1991.</p>
+      <p>Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.</p>
+      <p>Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including:</p>
+      <ul>
+        <li>Procedural</li>
+        <li>Object-oriented</li>
+        <li>Functional programming</li>
+      </ul>
+      <p>Python is often described as a "batteries included" language due to its comprehensive standard library.</p>
+    </section>
+    
+    <section class="main-section" id="Getting_Started">
+      <header>Getting Started</header>
+      <p>Installing Python is the first step to begin programming. Visit <a href="https://www.python.org/downloads/" target="_blank" rel="noopener noreferrer">python.org</a> to download the latest version for your operating system.</p>
+      <p>Once installed, you can verify the installation by opening a terminal or command prompt and typing:</p>
+      <code>python --version</code>
+      <p>To write your first program, create a file named <code>hello.py</code> with the following content:</p>
+      <code>print("Hello, World!")</code>
+      <p>Run the program from the terminal with the command:</p>
+      <code>python hello.py</code>
+    </section>
+    
+    <section class="main-section" id="Data_Types">
+      <header>Data Types</header>
+      <p>Python has several built-in data types:</p>
+      <ul>
+        <li>Numeric Types: int, float, complex</li>
+        <li>Text Type: str</li>
+        <li>Sequence Types: list, tuple, range</li>
+        <li>Mapping Type: dict</li>
+        <li>Set Types: set, frozenset</li>
+        <li>Boolean Type: bool</li>
+        <li>Binary Types: bytes, bytearray, memoryview</li>
+      </ul>
+      <p>Here are some examples of variable assignments:</p>
+      <code>
+x = 5       # int
+y = 3.14    # float
+name = "Python"  # str
+is_cool = True   # bool
+</code>
+      <p>Lists are ordered and changeable collections:</p>
+      <code>
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits[1])  # Output: banana
+</code>
+      <p>Dictionaries store key-value pairs:</p>
+      <code>
+person = {
+    "name": "John",
+    "age": 30,
+    "city": "New York"
+}
+print(person["name"])  # Output: John
+</code>
+    </section>
+    
+    <section class="main-section" id="Control_Flow">
+      <header>Control Flow</header>
+      <p>Control flow statements determine the order in which your code executes. Python has several control flow statements:</p>
+      <p>Conditional statements with if, elif, and else:</p>
+      <code>
+x = 10
+if x > 10:
+    print("x is greater than 10")
+elif x == 10:
+    print("x is equal to 10")
+else:
+    print("x is less than 10")
+</code>
+      <p>For loops for iteration:</p>
+      <code>
+for i in range(5):
+    print(i)  # Outputs 0, 1, 2, 3, 4
+</code>
+      <p>While loops continue until a condition is false:</p>
+      <code>
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+</code>
+      <p>Use the break statement to exit a loop prematurely:</p>
+      <p>The continue statement skips the current iteration and moves to the next one.</p>
+    </section>
+    
+    <section class="main-section" id="Functions">
+      <header>Functions</header>
+      <p>Functions are blocks of reusable code that perform a specific task. They help organize your code and make it more modular.</p>
+      <p>To define a function in Python, use the def keyword:</p>
+      <code>
+def greet(name):
+    return f"Hello, {name}!"
+
+# Call the function
+message = greet("Alice")
+print(message)  # Output: Hello, Alice!
+</code>
+      <p>Functions can have default parameter values:</p>
+      <code>
+def greet(name, greeting="Hello"):
+    return f"{greeting}, {name}!"
+
+print(greet("Bob"))  # Output: Hello, Bob!
+print(greet("Bob", "Hi"))  # Output: Hi, Bob!
+</code>
+      <p>Python functions can return multiple values using tuples:</p>
+      <code>
+def get_dimensions():
+    return 100, 50
+
+width, height = get_dimensions()
+print(width)   # Output: 100
+print(height)  # Output: 50
+</code>
+    </section>
+    
+    <section class="main-section" id="Object_Oriented_Programming">
+      <header>Object Oriented Programming</header>
+      <p>Python is an object-oriented programming language. Everything in Python is an object, including strings, lists, dictionaries, and functions.</p>
+      <p>You can define your own classes to create custom objects:</p>
+      <code>
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def greet(self):
+        return f"Hello, my name is {self.name}"
+
+# Create an instance of the Person class
+alice = Person("Alice", 30)
+print(alice.greet())  # Output: Hello, my name is Alice
+</code>
+      <p>Inheritance allows you to create a new class that inherits attributes and methods from an existing class:</p>
+      <code>
+class Student(Person):
+    def __init__(self, name, age, grade):
+        super().__init__(name, age)
+        self.grade = grade
+    
+    def study(self):
+        return f"{self.name} is studying hard!"
+
+bob = Student("Bob", 15, "10th")
+print(bob.greet())  # Inherited from Person class
+print(bob.study())  # Method from Student class
+</code>
+    </section>
+    
+    <section class="main-section" id="Modules_and_Packages">
+      <header>Modules and Packages</header>
+      <p>Modules are Python files containing functions, classes, and variables that you can import and use in your programs.</p>
+      <p>To import a module, use the import statement:</p>
+      <code>
+import math
+print(math.sqrt(16))  # Output: 4.0
+</code>
+      <p>You can import specific functions or classes from a module:</p>
+      <code>
+from math import sqrt, pi
+print(sqrt(16))  # Output: 4.0
+print(pi)       # Output: 3.141592653589793
+</code>
+      <p>Packages are directories containing multiple module files and a special __init__.py file. They help organize related modules.</p>
+      <p>The Python Standard Library includes many useful modules and packages for common tasks:</p>
+      <ul>
+        <li>os and sys for operating system interfaces</li>
+        <li>datetime for date and time handling</li>
+        <li>json for JSON data processing</li>
+        <li>re for regular expressions</li>
+        <li>random for generating random numbers</li>
+      </ul>
+    </section>
+    
+    <section class="main-section" id="Exception_Handling">
+      <header>Exception Handling</header>
+      <p>Exception handling allows you to gracefully handle errors that occur during program execution.</p>
+      <p>Use try, except, else, and finally blocks to handle exceptions:</p>
+      <code>
+try:
+    x = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print("Division successful")  # This will run if no exception occurs
+finally:
+    print("This always executes")  # This will always run
+</code>
+      <p>You can catch multiple exception types:</p>
+      <code>
+try:
+    num = int(input("Enter a number: "))
+    result = 10 / num
+except ValueError:
+    print("That's not a valid number!")
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+</code>
+      <p>To raise an exception manually, use the raise statement:</p>
+      <code>
+def validate_age(age):
+    if age < 0:
+        raise ValueError("Age cannot be negative")
+    return age
+</code>
+      <p>Custom exception classes can be created by inheriting from the Exception class:</p>
+      <code>
+class CustomError(Exception):
+    def __init__(self, message):
+        self.message = message
+        super().__init__(self.message)
+</code>
+    </section>
+  </main>
+</body>
+</html>

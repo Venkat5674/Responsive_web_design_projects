@@ -37,11 +37,11 @@ This repository contains the five Responsive Web Design projects required to com
 ## How to Run the Projects
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/freecodecamp-responsive-projects.git
+   git clone [https://github.com/Venkat5674/Responsive_web_design_projects.git]
    ```
 2. Navigate to the project folder:
    ```bash
-   cd project-folder-name
+   cd Responsive_web_design_projects
    ```
 3. Open `index.html` in a web browser.
 
